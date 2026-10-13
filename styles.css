@@ -1,8 +1,33 @@
 /*
+ * Typst-style term list layout: bold term, inline description,
+ * hanging indent for wrapped lines. Override via CSS snippet by
+ * targeting `.description-list`.
+ */
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.description-list {
+    margin: var(--p-spacing) 0;
+}
 
-If your plugin does not need CSS, delete this file.
+.description-list > div {
+    padding-inline-start: 1.5em;
+    text-indent: -1.5em;
+}
 
-*/
+.description-list > div + div {
+    margin-top: 0.25em;
+}
+
+.description-list dt {
+    display: inline;
+    font-weight: var(--bold-weight, 600);
+}
+
+.description-list dt::after {
+    content: ':';
+}
+
+.description-list dd {
+    display: inline;
+    margin: 0;
+    margin-inline-start: 0.4em;
+}

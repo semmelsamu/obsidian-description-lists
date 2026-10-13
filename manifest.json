@@ -1,11 +1,10 @@
 {
-    "id": "sample-plugin",
-    "name": "Sample Plugin",
+    "id": "description-lists",
+    "name": "Description Lists",
     "version": "1.0.0",
     "minAppVersion": "1.0.0",
-    "description": "Demonstrates some of the capabilities of the Obsidian API.",
-    "author": "Obsidian",
-    "authorUrl": "https://obsidian.md",
-    "fundingUrl": "https://obsidian.md/pricing",
+    "description": "Render Typst-style term lists as description lists in reading view.",
+    "author": "Samuel Kroiß",
+    "authorUrl": "https://github.com/semmelsamu",
     "isDesktopOnly": false
 }

@@ -1,7 +1,7 @@
 {
-    "name": "obsidian-sample-plugin",
+    "name": "description-lists",
     "version": "1.0.0",
-    "description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+    "description": "Render Typst-style term lists as description lists in Obsidian reading view.",
     "main": "main.js",
     "type": "module",
     "scripts": {
