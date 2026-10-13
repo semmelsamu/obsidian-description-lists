@@ -52,7 +52,10 @@ async function renderEntry(
     const row = dl.createDiv();
     const dt = row.createEl('dt');
     const dd = row.createEl('dd');
-    await renderInline(app, entry.term, dt, sourcePath, component);
+    // Wrap the term in <strong> so themes that style bold text
+    // (e.g. via `--bold-color`) apply to it as well.
+    const term = dt.createEl('strong');
+    await renderInline(app, entry.term, term, sourcePath, component);
     await renderInline(app, entry.description, dd, sourcePath, component);
 }
 

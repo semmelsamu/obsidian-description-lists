@@ -19,7 +19,6 @@
 
 .description-list dt {
     display: inline;
-    font-weight: var(--bold-weight, 600);
 }
 
 .description-list dd {
