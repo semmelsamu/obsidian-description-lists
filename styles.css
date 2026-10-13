@@ -22,12 +22,8 @@
     font-weight: var(--bold-weight, 600);
 }
 
-.description-list dt::after {
-    content: ':';
-}
-
 .description-list dd {
     display: inline;
     margin: 0;
-    margin-inline-start: 0.4em;
+    margin-inline-start: 0.65em;
 }
