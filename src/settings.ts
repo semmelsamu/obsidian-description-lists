@@ -1,22 +1,42 @@
-import { App, PluginSettingTab, Setting } from 'obsidian';
-import MyPlugin from './main';
+import {
+    App,
+    PluginSettingTab,
+    Setting,
+    SettingDefinitionItem,
+} from 'obsidian';
+import DescriptionListsPlugin from './main';
 
-export interface MyPluginSettings {
+export interface DescriptionListsSettings {
     mySetting: string;
 }
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
+export const DEFAULT_SETTINGS: DescriptionListsSettings = {
     mySetting: 'default',
 };
 
-export class SampleSettingTab extends PluginSettingTab {
-    plugin: MyPlugin;
+export class DescriptionListsSettingTab extends PluginSettingTab {
+    plugin: DescriptionListsPlugin;
 
-    constructor(app: App, plugin: MyPlugin) {
+    constructor(app: App, plugin: DescriptionListsPlugin) {
         super(app, plugin);
         this.plugin = plugin;
     }
 
+    getSettingDefinitions(): SettingDefinitionItem[] {
+        return [
+            {
+                name: 'Settings #1',
+                desc: "It's a secret",
+                control: {
+                    type: 'text',
+                    key: 'mySetting',
+                    placeholder: 'Enter your secret',
+                },
+            },
+        ];
+    }
+
+    // Fallback for Obsidian versions older than 1.13.0
     display(): void {
         const { containerEl } = this;
 
