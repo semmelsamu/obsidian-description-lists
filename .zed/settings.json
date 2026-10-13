@@ -1,0 +1,9 @@
+{
+    "tab_size": 4,
+    "hard_tabs": false,
+    "format_on_save": "on",
+    "formatter": "prettier",
+    "prettier": {
+        "allowed": true
+    }
+}
